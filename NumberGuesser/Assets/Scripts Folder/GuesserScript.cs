@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GuesserScript : MonoBehaviour {
 
-    public bool winCondition = false;
+    bool winCondition = false;
+    public int maxGuesses;
     public int max;
     public int min;
-    public int guess;
+    int guess;
 
     // Use this for initialization
     private void Start() {
@@ -15,8 +16,11 @@ public class GuesserScript : MonoBehaviour {
         print("Welcome to... \n\tNumber Guesser!");
         print("Pick a number between " + min + " and " + max + "!");
 
+
+        guess = Random.Range(400, 600);
+
         //Is the value Guess
-        print("Is the value" + guess + "?");
+        print("Is the number " + guess + "?");
 
         //instructions - push these buttons
         print("Press the up arrow if your number is higher \n the down arrow if your number is lower, \n and enter if I'm correct.");
@@ -28,6 +32,26 @@ public class GuesserScript : MonoBehaviour {
         if (winCondition == true)
         {
             print("I win! Thanks for playing!");
+            Application.Quit();
         }
-	}
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            min = guess + 1;
+            guess = Random.Range(min, max);
+            print("Is the number " + guess + "?");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            max = guess - 1;
+            guess = Random.Range(min, max);
+            print("Is the number " + guess + "?");
+        }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            winCondition = true;
+        }
+    }
 }
