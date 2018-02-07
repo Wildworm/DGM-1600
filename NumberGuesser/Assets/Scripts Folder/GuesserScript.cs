@@ -9,7 +9,6 @@ public class GuesserScript : MonoBehaviour {
     public int min;
     int guess;
     int count;
-   
 
     // Use this for initialization
     private void Start() {
@@ -20,7 +19,7 @@ public class GuesserScript : MonoBehaviour {
 
         //Is the value Guess
         Guess(count);
-        count = count--;
+        
 
         //instructions - push these buttons
         print("Press the up arrow if your number is higher \n the down arrow if your number is lower, \n and enter if I'm correct.");
@@ -30,22 +29,22 @@ public class GuesserScript : MonoBehaviour {
 
     private void Guess(int count)
     {
-        guess = Random.Range(min, max);
-        
-        print("Is the number " + guess + "?");
-        print(count);
-
-    }
-    //count variable broken**************************
-	
-	// Update is called once per frame
-	public void Update() {
-
-        if (count == 0)
+        if (count == maxGuesses)
         {
             print("Well... \nyou win...");
             Application.Quit();
         }
+        else
+        {
+            guess = Random.Range(min, max);
+            print("Is the number " + guess + "?");
+        }
+    }
+
+	
+	// Update is called once per frame
+	public void Update() {
+
         //Enter
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -55,8 +54,9 @@ public class GuesserScript : MonoBehaviour {
         //up arrow
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            count = count + 1;
             min = guess + 1;
-            count = count--;
+
             Guess(count);
            
         }
@@ -64,8 +64,8 @@ public class GuesserScript : MonoBehaviour {
         //Down arrow
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            count = count + 1;
             max = guess - 1;
-            count = count--;
             Guess(count);
            
         }
