@@ -9,4 +9,5 @@ public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
     }
+
 }
