@@ -48,7 +48,7 @@ public class GuesserScript : MonoBehaviour {
         //Enter
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            print("YOU LOSE!");
+            print("HA! YOU LOSE!");
             Application.Quit();
         }
         //up arrow
