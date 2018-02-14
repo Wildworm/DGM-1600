@@ -153,7 +153,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 879808656}
   title: {fileID: 1619033348}
-  myPlace: 0
+  knife: 0
+  lockpick: 0
+  doorUnlocked: 0
+  myPlace: 9
+  NewGame: Level01
 --- !u!1 &215191696
 GameObject:
   m_ObjectHideFlags: 0
