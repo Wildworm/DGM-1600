@@ -7,7 +7,7 @@ public class BallBounceBehavior : MonoBehaviour
     private float playerVelocit;
     private Rigidbody2D rb;
     public float speed;
-
+    public AudioClip clip;
 
     void Start()
     {
@@ -17,6 +17,9 @@ public class BallBounceBehavior : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision collision)
     {
+        AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
+
+
         if (collision.gameObject.name == "PRight")
         {
             new Vector2(speed, 0);

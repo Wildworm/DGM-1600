@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4741138125937436}
   - component: {fileID: 114105370905327248}
-  - component: {fileID: 114625239008291850}
-  - component: {fileID: 114772920419761652}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -53,25 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0fff6719ccecb43895d4d070d32eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114625239008291850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1133314428891286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8d8a1b8bde1fb74a855f036d2b3f0ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114772920419761652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1133314428891286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a184f7c2a429bad468f1044559293127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  instance: {fileID: 0}
+  numberOfBricks: 0
+  level: 

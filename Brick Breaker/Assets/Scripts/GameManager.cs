@@ -1,14 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Singleton : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 
-    // Use this for initialization
-    public static Singleton instance = null;              //Static instance of Manager which allows it to be accessed by any other script.
+    public GameManager instance = null;
+    public int numberOfBricks;
+    public string level;
 
-    //Awake is always called before any Start functions
+    public void LoadLevel(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
+    void Update()
+    {
+        if (numberOfBricks == 0)
+        {
+            SceneManager.LoadScene(level);
+        }
+    }
     void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);

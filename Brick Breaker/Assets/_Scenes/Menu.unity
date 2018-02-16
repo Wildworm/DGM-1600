@@ -452,12 +452,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &467017175 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114105370905327248, guid: 4933d776b5dec9449b4a8d9eab2bc04f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1142216733}
-  m_Script: {fileID: 11500000, guid: ea0fff6719ccecb43895d4d070d32eed, type: 3}
 --- !u!1001 &595247987
 Prefab:
   m_ObjectHideFlags: 0
@@ -497,7 +491,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82401759410429798, guid: cc280aacb9ff69447baaf0cceeea16c3,
+        type: 2}
+      propertyPath: Priority
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 82401759410429798, guid: cc280aacb9ff69447baaf0cceeea16c3,
+        type: 2}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cc280aacb9ff69447baaf0cceeea16c3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &815074535
@@ -615,7 +621,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 114625239008291850, guid: 4933d776b5dec9449b4a8d9eab2bc04f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4933d776b5dec9449b4a8d9eab2bc04f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1248339942
@@ -857,7 +865,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 467017175}
+      - m_Target: {fileID: 114105370905327248, guid: 4933d776b5dec9449b4a8d9eab2bc04f,
+          type: 2}
         m_MethodName: LoadLevel
         m_Mode: 5
         m_Arguments:

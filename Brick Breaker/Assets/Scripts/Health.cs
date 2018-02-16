@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
     public int health;
+    public AudioClip clip;
 
     private void OnCollisionEnter2D(Collision2D collission)
     {
@@ -17,6 +18,7 @@ public class Health : MonoBehaviour {
         if (health <= 0)
         {
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(clip,  new Vector3(0, 0, 0));
 
         }
     }
