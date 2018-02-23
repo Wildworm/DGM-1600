@@ -89,9 +89,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallBounceBehavior.cs" />
     <Compile Include="Assets\Scripts\BallLaunch.cs" />
+    <Compile Include="Assets\Scripts\Brick.cs" />
+    <Compile Include="Assets\Scripts\BrickCount.cs" />
     <Compile Include="Assets\Scripts\Floor.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\MouseMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />

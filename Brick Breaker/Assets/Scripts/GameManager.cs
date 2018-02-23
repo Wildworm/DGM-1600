@@ -7,19 +7,10 @@ public class GameManager : MonoBehaviour
 {
 
     public GameManager instance = null;
-    public int numberOfBricks;
-    public string level;
 
     public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
-    }
-    void Update()
-    {
-        if (numberOfBricks == 0)
-        {
-            SceneManager.LoadScene(level);
-        }
     }
     void Awake()
     {

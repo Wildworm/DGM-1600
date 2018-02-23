@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class BallBounceBehavior : MonoBehaviour
 {
-    private float playerVelocit;
+
+    public AudioClip hit;
+    public float ballLaunchSpeed;
+    private bool ballInPlay = false;
     private Rigidbody2D rb;
-    public float speed;
-    public AudioClip clip;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    void Update()
+    {
 
+        if (Input.GetKeyDown(KeyCode.Space) && ballInPlay == false)
+        {
+            ballInPlay = true;
+            transform.parent = null;
+            rb.AddForce(transform.up * ballLaunchSpeed);
+
+        }
+    }
     // Update is called once per frame
     void OnCollisionEnter(Collision collision)
     {
-        AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
-
-
-        if (collision.gameObject.name == "PRight")
-        {
-            new Vector2(speed, 0);
-        }
-
-        if (collision.gameObject.name == "PLeft")
-        {
-            rb.AddForce(transform.right * (0 - speed));
-        }
+        AudioSource.PlayClipAtPoint(hit, new Vector3(5, 1, 2));
     }
 }

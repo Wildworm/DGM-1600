@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212839579704096774}
   - component: {fileID: 50845978908621576}
   - component: {fileID: 58289813096165866}
-  - component: {fileID: 114546991425405300}
   - component: {fileID: 114778369348018584}
   m_Layer: 0
   m_Name: Ball
@@ -111,7 +110,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.5
+  m_GravityScale: 0.2
   m_Material: {fileID: 6200000, guid: 0b9722a8d8f215f4891cd305aa6b3dd5, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -175,18 +174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
---- !u!114 &114546991425405300
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1605456958444780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e0bf5f2045b77458e74bc548c39e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballLaunchSpeed: 600
 --- !u!114 &114778369348018584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a630e948848a0d04b90d1cc4516d53b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  clip: {fileID: 8300000, guid: 4771d3203ec1ccc4784801bdb9f1659e, type: 3}
+  hit: {fileID: 8300000, guid: 4771d3203ec1ccc4784801bdb9f1659e, type: 3}
+  ballLaunchSpeed: 400
 --- !u!212 &212303330554064810
 SpriteRenderer:
   m_ObjectHideFlags: 1

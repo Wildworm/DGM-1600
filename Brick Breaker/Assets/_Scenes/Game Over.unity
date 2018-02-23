@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0fff6719ccecb43895d4d070d32eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
 --- !u!4 &467017176
 Transform:
   m_ObjectHideFlags: 0
@@ -871,7 +872,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 467017175}
+      - m_Target: {fileID: 114105370905327248, guid: 4933d776b5dec9449b4a8d9eab2bc04f,
+          type: 2}
         m_MethodName: LoadLevel
         m_Mode: 5
         m_Arguments:

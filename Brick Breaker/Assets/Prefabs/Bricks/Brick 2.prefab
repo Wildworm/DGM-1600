@@ -80,6 +80,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   clip: {fileID: 8300000, guid: 366b263e6858aa842a2822419eff14f6, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 46a89acfb43f3a6428092af2cb225b62, type: 3}
+  - {fileID: 21300004, guid: 46a89acfb43f3a6428092af2cb225b62, type: 3}
 --- !u!212 &212768019991867332
 SpriteRenderer:
   m_ObjectHideFlags: 1
